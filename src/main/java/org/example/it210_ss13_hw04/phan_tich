@@ -1,0 +1,18 @@
+-HQL vs Native SQL
+Tiêu chí	     HQL	              Native SQL
+Làm việc với	 Class (Entity)	      Table (DB)
+Phụ thuộc DB	 Không	              Có
+Đổi tên cột	     Không ảnh hưởng	  Phải sửa code
+An toàn	         Cao (param)	      Dễ SQL Injection
+-Vì sao HQL an toàn hơn?
+
+ HQL dùng:
+
+Tên class + field Java (VD: Medicine.expiryDate)
+Không dùng tên cột DB
+
+ Khi đổi DB:
+
+Đổi tên cột trong DB
+Chỉ cần sửa annotation (@Column)
+Code HQL không cần sửa
